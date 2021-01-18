@@ -1,0 +1,12 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #817450;
+}
+
+ul.jobs li {
+    list-style-type: none;
+}

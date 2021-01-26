@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/img/favicon.jpg" />
+    <link href="~/cs/main.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <h1>@ViewBag.Title</h1>
+        <menu>
+            <ul class="jobs">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Grades">Grades</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    @RenderBody()
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/grades.js"></script>
+</body>
+
+</html>

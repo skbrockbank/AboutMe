@@ -1,17 +1,15 @@
-﻿var submit = document.getElementById("submitButton");
+﻿$("#submitButton").click(function () {
+    var assignments = $("#assignments");
+    var groupProject = $("#groupProject");
+    var quizzes = $("#quizzes");
+    var exams = $("#exams");
+    var intex = $("#intex");
 
-submit.addEventListener("click", function () {
-    var assignments = document.getElementById("assignments");
-    var groupProject = document.getElementById("groupProject");
-    var quizzes = document.getElementById("quizzes");
-    var exams = document.getElementById("exams");
-    var intex = document.getElementById("intex");
-
-    var assignmentsPct = assignments.value * .5;
-    var groupProjectPct = groupProject.value * .1;
-    var quizzesPct = quizzes.value * .1;
-    var examsPct = exams.value * .2;
-    var intexPct = intex.value * .1;
+    var assignmentsPct = assignments.val() * .5;
+    var groupProjectPct = groupProject.val() * .1;
+    var quizzesPct = quizzes.val() * .1;
+    var examsPct = exams.val() * .2;
+    var intexPct = intex.val() * .1;
 
     var grade = assignmentsPct + groupProjectPct + quizzesPct + examsPct + intexPct;
     var letter;

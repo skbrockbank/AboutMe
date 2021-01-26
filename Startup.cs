@@ -22,14 +22,16 @@ namespace AboutMe
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // Send to the developer exception page if an error occurs in the developer environment
             if (env.IsEnvironment("Development"))
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-                //Add Error Page
+                // Add Error Page
             }
+
             app.UseNodeModules();
             app.UseStaticFiles();
 

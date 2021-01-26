@@ -1,17 +1,24 @@
-﻿$("#submitButton").click(function () {
+﻿/* This code will take the user's inputs and calculate their final grade */
+
+$("#submitButton").click(function () {
+    /* gather information from the document*/
     var assignments = $("#assignments");
     var groupProject = $("#groupProject");
     var quizzes = $("#quizzes");
     var exams = $("#exams");
     var intex = $("#intex");
 
+    /* calculate the percentage for each category*/
     var assignmentsPct = assignments.val() * .5;
     var groupProjectPct = groupProject.val() * .1;
     var quizzesPct = quizzes.val() * .1;
     var examsPct = exams.val() * .2;
     var intexPct = intex.val() * .1;
 
+    /* calculate total grade */
     var grade = assignmentsPct + groupProjectPct + quizzesPct + examsPct + intexPct;
+
+    /* find the letter grade */
     var letter;
 
     if (grade >= 94) {
@@ -51,5 +58,6 @@
         letter = "E";
     }
 
+    /* print out grade */
     alert("Final grade is " + grade + " which earns the grade of " + letter);
 });

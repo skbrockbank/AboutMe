@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AboutMe.Models
 {
+    //Set the range and require each of the percentages to calculate grades
     public class GradesModel
     {
         [Range(0, 100)]

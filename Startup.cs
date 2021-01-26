@@ -32,11 +32,14 @@ namespace AboutMe
                 // Add Error Page
             }
 
+            // Link to node modules and static files
             app.UseNodeModules();
             app.UseStaticFiles();
 
+            // Set up routing
             app.UseRouting();
 
+            // Set up endpoints
             app.UseEndpoints(cfg =>
             {
                 cfg.MapControllerRoute("Default",
